@@ -8,35 +8,58 @@
 	<title>React Native. Введение</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/black.css">
+
+	<link rel="stylesheet" href="css/theme/night.css">
 
 	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="lib/css/vs2015.css">
 
-	<!-- Printing and PDF exports -->
-	<script>
-		var link = document.createElement('link');
-		link.rel = 'stylesheet';
-		link.type = 'text/css';
-		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-		document.getElementsByTagName('head')[0].appendChild(link);
-	</script>
+	<style>
+		.reveal pre {
+			tab-size: 4;
+			margin: 0;
+			display: inline-table;
+		}
+
+		.reveal pre code {
+			padding: 16px;
+		}
+
+		.reveal pre code code {
+			padding: 0;
+		}
+
+		.flex {
+			display: flex;
+		}
+
+		.left-text {
+			text-align: left;
+		}
+
+		.backgrounds {
+			opacity: 0.3;
+		}
+	</style>
 </head>
 
 <body>
 	<div class="reveal">
 		<div class="slides">
 
-			<section>
+			<section id="main-slide">
 				<h1>React Native</h1>
 				<h3>Введение</h3>
+				<br />
 				<p>
 					<small>Александр Панюков</small>
 				</p>
 			</section>
 
 			<section>
-				<h3>Что такое React Native?</h3>
+				<section>
+					<h3>Что такое React Native?</h3>
+				</section>
 			</section>
 
 			<section>
@@ -48,12 +71,14 @@
 			</section>
 
 			<section>
-				<h3>Сравнение</h3>
 				<section>
-					<p>Ionic и Xamarin</p>
+					<h3>Сравнение</h3>
 				</section>
 				<section>
-					<p>Native Script</p>
+					<h3>Ionic и Xamarin</h3>
+				</section>
+				<section>
+					<h3>Native Script</h3>
 				</section>
 			</section>
 
@@ -68,9 +93,26 @@
 			</section>
 
 			<section>
-				<h3>Компоненты</h3>
 				<section>
 					<h3>Стилизация</h3>
+					<pre>
+							<code class="javascript" data-trim data-noescape>
+									function $initHighlight(block, cls) {
+										try {
+											if (cls.search(/\bno\-highlight\b/) != -1)
+												return process(block, true, 0x0F) +
+																` class="${cls}"`;
+										} catch (e) {
+											/* handle exception */
+										}<code data-trim class="fragment">	for (var i = 0 / 2; i < classes.length; i++) {
+											if (checkCondition(classes[i]) === undefined)
+												console.log('undefined');
+										}</code>}
+									
+									export  $initHighlight;
+								</code>
+						</pre>
+
 				</section>
 				<section>
 					<h3>Анимация</h3>
@@ -115,10 +157,12 @@
 	<script src="js/reveal.js"></script>
 
 	<script>
-		// More info about config & dependencies:
-		// - https://github.com/hakimel/reveal.js#configuration
-		// - https://github.com/hakimel/reveal.js#dependencies
 		Reveal.initialize({
+			width: '95%',
+			height: '95%',
+			parallaxBackgroundImage: 'https://images3.alphacoders.com/221/221065.jpg',
+			parallaxBackgroundSize: '4034px 2275px',
+			parallaxBackgroundVertical: 400,
 			history: true,
 			dependencies: [
 				{ src: 'plugin/markdown/marked.js' },
