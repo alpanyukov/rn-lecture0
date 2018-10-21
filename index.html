@@ -22,10 +22,6 @@
 			display: inline-table;
 		}
 
-		.reveal pre code {
-			padding: 16px;
-		}
-
 		.reveal pre code code {
 			padding: 0;
 		}
@@ -42,9 +38,32 @@
 			opacity: 0.3;
 		}
 
+		.without-dot li {
+			list-style-type: none;
+			margin: 0.5em 0;
+		}
+
 		.hljs,
 		.reveal code {
 			font-family: 'Fira Code' !important;
+		}
+
+		.code-grid {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.code-grid .grid-row {
+			display: flex;
+			flex: 1;
+			width: 100%;
+		}
+
+		.code-grid .grid-cell {
+			display: flex;
+			flex: 1;
+			margin: 4px;
+			width: 100%;
 		}
 	</style>
 </head>
@@ -64,26 +83,31 @@
 
 			<section>
 				<section>
-					<h3>Что такое React Native?</h3>
+					<h3>❔ Что такое React Native?</h3>
 				</section>
 				<section>
 					<h4>
-						React Native — это фреймворк для разработки кроссплатформенных приложений для iOS и Android
+						React Native — это фреймворк для разработки кросплатформенных приложений под iOS и Android
 					</h4>
-					<ul>
-						<li class="fragment">появился в начале 2015 года</li>
-						<li class="fragment">построен на базе React</li>
-						<li class="fragment">не использует WebView и HTML - технологии</li>
-						<li class="fragment">нативные компоненты имеют биндинги в JS и обернуты в React</li>
+					<br />
+					<ul class="without-dot">
+						<li class="fragment">Тот же React но для мобильных платформ.</li>
+						<li class="fragment">Действительно нативный.</li>
+						<li class="fragment">Большинство компонентов фреймворка — кросплатформенные</li>
 					</ul>
 				</section>
 			</section>
 
 			<section>
 				<section>
-					<h3>Как это работает</h3>
+					<h3>🤔 Как это работает</h3>
 				</section>
 				<section>
+					<!-- TODO: сделать svg -->
+					<img src="/img/rn-sheme.jpg" alt="react native scheme" />
+				</section>
+				<section>
+					<!-- TODO: добавить движение данных -->
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
 					 preserveAspectRatio="xMidYMid meet" viewBox="0 0 480 470" width="480" height="470">
 						<defs>
@@ -156,16 +180,74 @@
 				</section>
 			</section>
 
-
 			<section>
 				<section>
-					<h3>Сравнение</h3>
+					<h3>💅 Стилизация</h3>
+					<div class="code-grid">
+						<div class="grid-row">
+							<div class="grid-cell" style="flex-direction: column;">
+								<span>Web</span>
+								<pre class="fragment" style="width: 100%;" data-fragment-index="0">
+									<code class="css" data-trim style="font-size: 90%;" >
+										.container{
+											width: 200px;
+											background-color: tomato;
+										}
+									</code>
+								</pre>
+							</div>
+							<div class="grid-cell" style="flex-direction:column;">
+								<span>Mobile</span>
+								<pre class="fragment" data-fragment-index="1" style="width: 100%;">
+										<code class="javascript" data-trim data-noescape >
+											import {StyleSheet} from 'react-native';
+		
+											const styles = StyleSheet.create({
+												container: {
+													width: 200,
+													backgroundColor: 'tomato'
+												}
+											});
+										</code>
+								</pre>
+							</div>
+						</div>
+						<div class="grid-row">
+							<pre class="fragment grid-cell" data-fragment-index="2">
+									<code class="javascript" data-trim style="width: 100%;">
+										import React from 'react';
+										import 'styles.css';
+		
+										const Container = ({children})=>(
+											&lt;div className="container">
+												{children}
+											&lt;/div&gt;
+										);
+									</code>
+								</pre>
+							<pre class="fragment grid-cell" data-fragment-index="3">
+									<code class="javascript" data-trim style="width: 100%;">
+										import React from 'react';
+										import {View} from 'react-native';
+		
+										const Container = ({children})=>(
+											&lt;View style={styles.container}>
+												{children}
+											&lt;/View&gt;
+										);
+									</code>
+								</pre>
+						</div>
+					</div>
 				</section>
 				<section>
-					<h3>Ionic и Xamarin</h3>
+					<h3>😮 Анимация</h3>
 				</section>
 				<section>
-					<h3>Native Script</h3>
+					<h3>Навигация</h3>
+				</section>
+				<section>
+					<h3>Работа с сетью</h3>
 				</section>
 			</section>
 
@@ -180,50 +262,21 @@
 			</section>
 
 			<section>
-				<section>
-					<h3>Стилизация</h3>
-					<pre>
-							<code class="javascript" data-trim data-noescape>
-									function $initHighlight(block, cls) {
-										try {
-											if (cls.search(/\bno\-highlight\b/) != -1)
-												return process(block, true, 0x0F) +
-																` class="${cls}"`;
-										} catch (e) {
-											/* handle exception */
-										}<code data-trim class="fragment">	for (var i = 0 / 2; i < classes.length; i++) {
-											if (checkCondition(classes[i]) === undefined)
-												console.log('undefined');
-										}</code>}
-									
-									export  $initHighlight;
-								</code>
-						</pre>
-
-				</section>
-				<section>
-					<h3>Анимация</h3>
-				</section>
-				<section>
-					<h3>Навигация</h3>
-				</section>
-				<section>
-					<h3>Работа с сетью</h3>
-				</section>
-			</section>
-
-			<section>
-				<h3>Прочие платформы</h3>
-				<ul>
-					<li>Веб</li>
-					<li>Windows</li>
-					<li>Mac OS</li>
-					<li>VR</li>
-				</ul>
-			</section>
-
-			<section>
 				<h3>Плюсы и минусы</h3>
+				<section>
+					<h3>Плюсы</h3>
+					<ul class="without-dot">
+						<li class="fragment">Любимый JS и React ❤️.</li>
+						<li class="fragment">Натив. Нет обертки JS в веб-представление.</li>
+						<li class="fragment">Горячая перезагрузка. (если не правишь нативный код)</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Минусы</h3>
+					<ul class="without-dot">
+
+					</ul>>
+				</section>
 			</section>
 
 			<section>
@@ -248,8 +301,8 @@
 
 	<script>
 		Reveal.initialize({
-			width: '95%',
-			height: '95%',
+			// width: '95%',
+			// height: '95%',
 			parallaxBackgroundImage: 'https://images3.alphacoders.com/221/221065.jpg',
 			parallaxBackgroundSize: '4034px 2275px',
 			parallaxBackgroundVertical: 400,
