@@ -17,9 +17,10 @@
 
 	<style>
 		.reveal pre {
+			-moz-tab-size: 4;
+			-o-tab-size: 4;
 			tab-size: 4;
 			margin: 0;
-			display: inline-table;
 		}
 
 		.reveal pre code code {
@@ -27,6 +28,8 @@
 		}
 
 		.flex {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
 		}
 
@@ -55,20 +58,37 @@
 		}
 
 		.code-grid {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
 			flex-direction: column;
 		}
 
 		.code-grid .grid-row {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-flex: 1;
+			-ms-flex: 1;
 			flex: 1;
 			width: 100%;
 		}
 
 		.code-grid .grid-cell {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-flex: 1;
+			-ms-flex: 1;
 			flex: 1;
 			margin: 4px;
+			width: 100%;
+		}
+
+		.grid-cell code {
 			width: 100%;
 		}
 	</style>
@@ -188,56 +208,59 @@
 
 			<section>
 				<section>
+					<h3>🏗️ Компоненты</h3>
+				</section>
+				<section>
 					<h3>💅 Стилизация</h3>
+
 					<div class="code-grid">
 						<div class="grid-row">
-							<div class="grid-cell" style="flex-direction: column;">
-								<span>Web</span>
-								<pre class="fragment" style="width: 100%;" data-fragment-index="0">
-									<code class="css" data-trim style="font-size: 90%;" >
-										.container{
-											width: 200px;
-											background-color: tomato;
-										}
-									</code>
-								</pre>
-							</div>
-							<div class="grid-cell" style="flex-direction:column;">
-								<span>Mobile</span>
-								<pre class="fragment" data-fragment-index="1" style="width: 100%;">
-										<code class="javascript" data-trim data-noescape >
-											import {StyleSheet} from 'react-native';
-		
-											const styles = StyleSheet.create({
-												container: {
-													width: 200,
-													backgroundColor: 'tomato'
-												}
-											});
-										</code>
-								</pre>
-							</div>
+							<span class="grid-cell">Web</span>
+							<span class="grid-cell ">Mobile</span>
 						</div>
 						<div class="grid-row">
-							<pre class="fragment grid-cell" data-fragment-index="2">
-									<code class="javascript" data-trim style="width: 100%;">
+							<pre class=" grid-cell" style="width: 100%;">
+								<code class="javascript" data-trim style="font-size: 90%;" data-noescape >
+									const styles = <span class="fragment" data-fragment-index="0">{
+										container: {
+											width: 200,
+											background-color: 'tomato'
+										}
+									};</span>
+								</code>
+							</pre>
+							<pre class="grid-cell" style="width: 100%;">
+								<code class="javascript" data-trim data-noescape >
+									<span class="fragment" data-fragment-index="4">import {StyleSheet} from 'react-native';</span>
+
+									const styles = <span class="fragment" data-fragment-index="4">StyleSheet.create(</span><span class="fragment" data-fragment-index="2">{
+										container: {
+											width: 200,
+											backgroundColor: 'tomato'
+										}
+									}</span><span class="fragment" data-fragment-index="4">);</span>
+								</code>
+						</pre>
+						</div>
+						<div class="grid-row">
+							<pre class="grid-cell">
+									<code class="javascript" data-trim data-noescape>
 										import React from 'react';
-										import 'styles.css';
 		
 										const Container = ({children})=>(
-											&lt;div className="container">
+											&lt;div style={<span class="fragment" data-fragment-index="1">styles.container</span>}>
 												{children}
 											&lt;/div&gt;
 										);
 									</code>
 								</pre>
-							<pre class="fragment grid-cell" data-fragment-index="3">
-									<code class="javascript" data-trim style="width: 100%;">
+							<pre class="grid-cell">
+									<code class="javascript" data-trim data-noescape>
 										import React from 'react';
 										import {View} from 'react-native';
 		
 										const Container = ({children})=>(
-											&lt;View style={styles.container}>
+											&lt;View style={<span class="fragment" data-fragment-index="3">styles.container</span>}&gt;
 												{children}
 											&lt;/View&gt;
 										);
@@ -247,31 +270,34 @@
 					</div>
 				</section>
 				<section>
-					<h3>😮 Анимация</h3>
+					<h3>✨ Анимация</h3>
 				</section>
 				<section>
 					<h3>Навигация</h3>
 				</section>
 				<section>
-					<h3>Работа с сетью</h3>
+					<h3>📡 Работа с сетью</h3>
 				</section>
 			</section>
 
 			<section>
-				<h3>🛠️ Процесы разработки</h3>
 				<section>
-					<p>Способ 1. Натив</p>
+					<h3>🛠️ Процесы разработки</h3>
 				</section>
 				<section>
-					<p>Способ 2. Expo</p>
+					<h3 class="text-left">Способ 1. Натив</h3>
+				</section>
+				<section>
+					<h3 class="text-left">Способ 2. Expo</h3>
 				</section>
 			</section>
 
 			<section>
-				<h3>Плюсы и минусы</h3>
-				<section></section>
 				<section>
-					<h3 class="left-text">Плюсы</h3>
+					<h3>👍👎 Плюсы и минусы</h3>
+				</section>
+				<section>
+					<h3 class="left-text">👍 Плюсы</h3>
 					<ul class="without-dot">
 						<li class="fragment">Любимый JS и React ❤️.</li>
 						<li class="fragment">Разработка сразу под несколько платформ.</li>
@@ -280,7 +306,7 @@
 					</ul>
 				</section>
 				<section>
-					<h3 class="left-text">🚫 Минусы</h3>
+					<h3 class="left-text">👎 Минусы</h3>
 					<ul class="without-dot">
 						<li class="fragment">Технически не зарелизен.</li>
 						<li class="fragment">Без нативного кода не обойтись.</li>
