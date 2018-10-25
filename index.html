@@ -91,6 +91,28 @@
 		.grid-cell code {
 			width: 100%;
 		}
+
+		.components {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 1em;
+		}
+
+		article.component {
+			border: 1px solid #e7ad52;
+			border-radius: 3px;
+		}
+
+		.component header {
+			padding: 5px 10px;
+			background-color: #e7ad52;
+		}
+
+		.component p {
+			font-size: .7em;
+			text-align: left;
+			margin: 12px;
+		}
 	</style>
 </head>
 
@@ -209,6 +231,32 @@
 			<section>
 				<section>
 					<h3>🏗️ Компоненты</h3>
+					<div class="components">
+						<article class="component fragment">
+							<header>&lt;View /&gt;</header>
+							<p>The most fundamental component for building a UI.</p>
+						</article>
+						<article class="component fragment">
+							<header>&lt;Text /&gt;</header>
+							<p>A component for displaying text.</p>
+						</article>
+						<article class="component fragment">
+							<header>&lt;Image /&gt;</header>
+							<p>A component for displaying images.</p>
+						</article>
+						<article class="component fragment">
+							<header>&lt;TextInput /&gt;</header>
+							<p>A component for inputting text into the app via a keyboard.</p>
+						</article>
+						<article class="component fragment">
+							<header>&lt;ScrollView /&gt;</header>
+							<p>Provides a scrolling container that can host multiple components and views.</p>
+						</article>
+						<article class="component fragment">
+							<header>StyleSheet</header>
+							<p>Provides an abstraction layer similar to CSS stylesheets.</p>
+						</article>
+					</div>
 				</section>
 				<section>
 					<h3>💅 Стилизация</h3>
@@ -224,7 +272,7 @@
 									const styles = <span class="fragment" data-fragment-index="0">{
 										container: {
 											width: 200,
-											background-color: 'tomato'
+											backgroundColor: 'tomato'
 										}
 									};</span>
 								</code>
