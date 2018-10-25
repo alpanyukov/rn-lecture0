@@ -38,7 +38,7 @@
 		}
 
 		.backgrounds {
-			opacity: 0.3;
+			opacity: 0.2;
 		}
 
 		ul.without-dot {
@@ -95,7 +95,7 @@
 		.components {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
-			grid-gap: 1em;
+			grid-gap: 0.4em;
 		}
 
 		article.component {
@@ -104,7 +104,7 @@
 		}
 
 		.component header {
-			padding: 5px 10px;
+			padding: 4px 8px;
 			background-color: #e7ad52;
 		}
 
@@ -234,27 +234,27 @@
 					<div class="components">
 						<article class="component fragment">
 							<header>&lt;View /&gt;</header>
-							<p>The most fundamental component for building a UI.</p>
+							<p>Основной компонент при построении UI. Аналог &lt;div/&gt;</p>
 						</article>
 						<article class="component fragment">
 							<header>&lt;Text /&gt;</header>
-							<p>A component for displaying text.</p>
+							<p>Компонент для отображения текста. Аналог &lt;span/&gt;</p>
 						</article>
 						<article class="component fragment">
 							<header>&lt;Image /&gt;</header>
-							<p>A component for displaying images.</p>
+							<p>Компонент для отрисовки изображений. Аналог &lt;img/&gt;</p>
 						</article>
 						<article class="component fragment">
 							<header>&lt;TextInput /&gt;</header>
-							<p>A component for inputting text into the app via a keyboard.</p>
+							<p>Компонент для ввода текста через клавиатуру. Аналог &lt;input type="text"/&gt; </p>
 						</article>
 						<article class="component fragment">
 							<header>&lt;ScrollView /&gt;</header>
-							<p>Provides a scrolling container that can host multiple components and views.</p>
+							<p>Скролируемый контейнер. Аналог тот же &lt;div/&gt; с overflow:auto. </p>
 						</article>
 						<article class="component fragment">
-							<header>StyleSheet</header>
-							<p>Provides an abstraction layer similar to CSS stylesheets.</p>
+							<header>&lt;Touchable* /&gt;</header>
+							<p>Компоненты, позволяющие обрабатывать touch-события.</p>
 						</article>
 					</div>
 				</section>
@@ -263,13 +263,13 @@
 
 					<div class="code-grid">
 						<div class="grid-row">
-							<span class="grid-cell">Web</span>
-							<span class="grid-cell ">Mobile</span>
+							<span class="grid-cell fragment" data-fragment-index="0">Web</span>
+							<span class="grid-cell fragment" style="justify-content: flex-end;" data-fragment-index="4">Mobile</span>
 						</div>
 						<div class="grid-row">
-							<pre class=" grid-cell" style="width: 100%;">
+							<pre class="grid-cell fragment" style="width: 100%;" data-fragment-index="0">
 								<code class="javascript" data-trim style="font-size: 90%;" data-noescape >
-									const styles = <span class="fragment" data-fragment-index="0">{
+									const styles = <span class="fragment" data-fragment-index="1">{
 										container: {
 											width: 200,
 											backgroundColor: 'tomato'
@@ -277,38 +277,38 @@
 									};</span>
 								</code>
 							</pre>
-							<pre class="grid-cell" style="width: 100%;">
+							<pre class="grid-cell fragment" style="width: 100%;" data-fragment-index="4">
 								<code class="javascript" data-trim data-noescape >
-									<span class="fragment" data-fragment-index="4">import {StyleSheet} from 'react-native';</span>
+									<span class="fragment" data-fragment-index="8">import {StyleSheet} from 'react-native';</span>
 
-									const styles = <span class="fragment" data-fragment-index="4">StyleSheet.create(</span><span class="fragment" data-fragment-index="2">{
+									const styles = <span class="fragment" data-fragment-index="8">StyleSheet.create(</span><span class="fragment" data-fragment-index="5">{
 										container: {
 											width: 200,
 											backgroundColor: 'tomato'
 										}
-									}</span><span class="fragment" data-fragment-index="4">);</span>
+									}</span><span class="fragment" data-fragment-index="8">);</span>
 								</code>
 						</pre>
 						</div>
 						<div class="grid-row">
-							<pre class="grid-cell">
+							<pre class="grid-cell fragment" data-fragment-index="2">
 									<code class="javascript" data-trim data-noescape>
 										import React from 'react';
 		
 										const Container = ({children})=>(
-											&lt;div style={<span class="fragment" data-fragment-index="1">styles.container</span>}>
+											&lt;div style={<span class="fragment" data-fragment-index="3">styles.container</span>}>
 												{children}
 											&lt;/div&gt;
 										);
 									</code>
 								</pre>
-							<pre class="grid-cell">
+							<pre class="grid-cell fragment" data-fragment-index="6">
 									<code class="javascript" data-trim data-noescape>
 										import React from 'react';
 										import {View} from 'react-native';
 		
 										const Container = ({children})=>(
-											&lt;View style={<span class="fragment" data-fragment-index="3">styles.container</span>}&gt;
+											&lt;View style={<span class="fragment" data-fragment-index="7">styles.container</span>}&gt;
 												{children}
 											&lt;/View&gt;
 										);
