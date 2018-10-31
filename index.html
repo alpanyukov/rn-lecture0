@@ -41,13 +41,18 @@
 			opacity: 0.2;
 		}
 
-		ul.without-dot {
+		ul.without-dot,
+		ol.without-dot {
 			margin: 0;
 			width: 100%;
 		}
 
-		.without-dot li {
+		ul.without-dot li {
 			list-style-type: none;
+			margin: 0.5em 0;
+		}
+
+		ol.without-dot li {
 			margin: 0.5em 0;
 		}
 
@@ -333,7 +338,18 @@
 					<h3>🛠️ Процесы разработки</h3>
 				</section>
 				<section>
-					<h3 class="text-left">Способ 1. Натив</h3>
+					<h3 class="text-left">Способ 1. Натив (Android)</h3>
+					<ol class="without-dot">
+						<li class="fragment"><code>npm install -g react-native-cli</code></li>
+						<li class="fragment"><a href="https://jdk.java.net/">Скачать</a> и установить Java JDK</li>
+						<li class="fragment"><a href="https://developer.android.com/studio/index.html">Скачать</a> и установить Android
+							Studio</li>
+						<li class="fragment"><code>react-native init ProjectName</code></li>
+						<li class="fragment"><code>cd ProjectName</code></li>
+						<li class="fragment"><code>react-native run-android</code></li>
+						<li class="fragment">PROFIT</li>
+					</ol>
+
 				</section>
 				<section>
 					<h3 class="text-left">Способ 2. Expo</h3>
@@ -365,7 +381,7 @@
 			<section>
 				<h3 class="left-text">Итоги</h3>
 				<ul class="without-dot">
-					<li class="fragment"></li>
+					<li class="fragment">Под каждую задачу свой инструмент</li>
 				</ul>
 			</section>
 
@@ -382,6 +398,7 @@
 
 			<section>
 				<h2>Спасибо за внимание</h2>
+				<h3 class="fragment">Вопросы?</h3>
 			</section>
 		</div>
 	</div>
@@ -395,7 +412,7 @@
 			// height: '95%',
 			parallaxBackgroundImage: 'https://images3.alphacoders.com/221/221065.jpg',
 			parallaxBackgroundSize: '4034px 2275px',
-			parallaxBackgroundVertical: 400,
+			parallaxBackgroundVertical: 300,
 			history: true,
 			dependencies: [
 				{ src: 'plugin/markdown/marked.js' },
