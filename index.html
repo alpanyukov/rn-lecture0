@@ -118,6 +118,16 @@
 			text-align: left;
 			margin: 12px;
 		}
+
+		.reveal .slides section .fragment.step-fade-in-then-out {
+			opacity: 0;
+			display: none;
+		}
+
+		.reveal .slides section .fragment.step-fade-in-then-out.current-fragment {
+			opacity: 1;
+			display: inline;
+		}
 	</style>
 </head>
 
@@ -324,6 +334,21 @@
 				</section>
 				<section>
 					<h3>✨ Анимация</h3>
+					<ul class="without-dot">
+						<li><a href="https://facebook.github.io/react-native/docs/animations">Animated API</a></li>
+						<li>Сторонние библиотеки</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<img class="fragment step-fade-in-then-out" style="height: 600px;" src="https://cdn-images-1.medium.com/max/1600/1*EViHdOI2b5sro9JAYa_X8g.gif"
+						 alt=" animation example with carousel" />
+						<img class="fragment step-fade-in-then-out" style="height: 600px;" src="https://cdn-images-1.medium.com/max/800/1*lx89GC4x2F8ExYAFRpdWtQ.gif"
+						 alt=" animation example with card slider " />
+						<img class="fragment step-fade-in-then-out" style="height: 600px;" src="https://github.com/fram-x/FluidTransitions/raw/develop/docs/example.gif"
+						 alt=" animation example with fluid transitions" />
+					</section>
+
 				</section>
 				<section>
 					<h3>Навигация</h3>
@@ -344,15 +369,21 @@
 						<li class="fragment"><a href="https://jdk.java.net/">Скачать</a> и установить Java JDK</li>
 						<li class="fragment"><a href="https://developer.android.com/studio/index.html">Скачать</a> и установить Android
 							Studio</li>
-						<li class="fragment"><code>react-native init ProjectName</code></li>
-						<li class="fragment"><code>cd ProjectName</code></li>
+						<li class="fragment"><code>react-native init project-name</code></li>
+						<li class="fragment"><code>cd project-name</code></li>
 						<li class="fragment"><code>react-native run-android</code></li>
-						<li class="fragment">PROFIT</li>
 					</ol>
 
 				</section>
 				<section>
 					<h3 class="text-left">Способ 2. Expo</h3>
+					<ol class="without-dot">
+						<li class="fragment"><code>npm install -g expo-cli</code></li>
+						<li class="fragment">Скачать Expo клиент (<a href="https://itunes.com/apps/exponent">IOS</a>|<a href="https://play.google.com/store/apps/details?id=host.exp.exponent">Android</a>)</li>
+						<li class="fragment"><code>expo init project-name</code></li>
+						<li class="fragment"><code>cd project-name</code></li>
+						<li class="fragment"><code>expo start</code></li>
+					</ol>
 				</section>
 			</section>
 
