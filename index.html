@@ -244,94 +244,94 @@
 			</section>
 
 			<section>
-				<section>
-					<h3>🏗️ Компоненты</h3>
-					<div class="components">
-						<article class="component fragment">
-							<header>&lt;View /&gt;</header>
-							<p>Основной компонент при построении UI. Аналог &lt;div/&gt;</p>
-						</article>
-						<article class="component fragment">
-							<header>&lt;Text /&gt;</header>
-							<p>Компонент для отображения текста. Аналог &lt;span/&gt;</p>
-						</article>
-						<article class="component fragment">
-							<header>&lt;Image /&gt;</header>
-							<p>Компонент для отрисовки изображений. Аналог &lt;img/&gt;</p>
-						</article>
-						<article class="component fragment">
-							<header>&lt;TextInput /&gt;</header>
-							<p>Компонент для ввода текста через клавиатуру. Аналог &lt;input type="text"/&gt; </p>
-						</article>
-						<article class="component fragment">
-							<header>&lt;ScrollView /&gt;</header>
-							<p>Скролируемый контейнер. Аналог тот же &lt;div/&gt; с overflow:auto. </p>
-						</article>
-						<article class="component fragment">
-							<header>&lt;Touchable* /&gt;</header>
-							<p>Компоненты, позволяющие обрабатывать touch-события.</p>
-						</article>
-					</div>
-				</section>
-				<section>
-					<h3>💅 Стилизация</h3>
+				<h3>🏗️ Компоненты</h3>
+				<div class="components">
+					<article class="component fragment">
+						<header>&lt;View /&gt;</header>
+						<p>Основной компонент при построении UI. Аналог &lt;div/&gt;</p>
+					</article>
+					<article class="component fragment">
+						<header>&lt;Text /&gt;</header>
+						<p>Компонент для отображения текста. Аналог &lt;span/&gt;</p>
+					</article>
+					<article class="component fragment">
+						<header>&lt;Image /&gt;</header>
+						<p>Компонент для отрисовки изображений. Аналог &lt;img/&gt;</p>
+					</article>
+					<article class="component fragment">
+						<header>&lt;TextInput /&gt;</header>
+						<p>Компонент для ввода текста через клавиатуру. Аналог &lt;input type="text"/&gt; </p>
+					</article>
+					<article class="component fragment">
+						<header>&lt;ScrollView /&gt;</header>
+						<p>Скролируемый контейнер. Аналог тот же &lt;div/&gt; с overflow:auto. </p>
+					</article>
+					<article class="component fragment">
+						<header>&lt;Touchable* /&gt;</header>
+						<p>Компоненты, позволяющие обрабатывать touch-события.</p>
+					</article>
+				</div>
+			</section>
+			<section>
+				<h3>💅 Стилизация</h3>
 
-					<div class="code-grid">
-						<div class="grid-row">
-							<span class="grid-cell fragment" data-fragment-index="0">Web</span>
-							<span class="grid-cell fragment" style="justify-content: flex-end;" data-fragment-index="4">Mobile</span>
-						</div>
-						<div class="grid-row">
-							<pre class="grid-cell fragment" style="width: 100%;" data-fragment-index="0">
-								<code class="javascript" data-trim style="font-size: 90%;" data-noescape >
-									const styles = <span class="fragment" data-fragment-index="1">{
-										container: {
-											width: 200,
-											backgroundColor: 'tomato'
-										}
-									};</span>
+				<div class="code-grid">
+					<div class="grid-row">
+						<span class="grid-cell fragment" data-fragment-index="0">Web</span>
+						<span class="grid-cell fragment" style="justify-content: flex-end;" data-fragment-index="4">Mobile</span>
+					</div>
+					<div class="grid-row">
+						<pre class="grid-cell fragment" style="width: 100%;" data-fragment-index="0">
+							<code class="javascript" data-trim style="font-size: 90%;" data-noescape >
+								const styles = <span class="fragment" data-fragment-index="1">{
+									container: {
+										width: 200,
+										backgroundColor: 'tomato'
+									}
+								};</span>
+							</code>
+						</pre>
+						<pre class="grid-cell fragment" style="width: 100%;" data-fragment-index="4">
+							<code class="javascript" data-trim data-noescape >
+								<span class="fragment" data-fragment-index="8">import {StyleSheet} from 'react-native';</span>
+
+								const styles = <span class="fragment" data-fragment-index="8">StyleSheet.create(</span><span class="fragment" data-fragment-index="5">{
+									container: {
+										width: 200,
+										backgroundColor: 'tomato'
+									}
+								}</span><span class="fragment" data-fragment-index="8">);</span>
+							</code>
+					</pre>
+					</div>
+					<div class="grid-row">
+						<pre class="grid-cell fragment" data-fragment-index="2">
+								<code class="javascript" data-trim data-noescape>
+									import React from 'react';
+	
+									const Container = ({children})=>(
+										&lt;div style={<span class="fragment" data-fragment-index="3">styles.container</span>}>
+											{children}
+										&lt;/div&gt;
+									);
 								</code>
 							</pre>
-							<pre class="grid-cell fragment" style="width: 100%;" data-fragment-index="4">
-								<code class="javascript" data-trim data-noescape >
-									<span class="fragment" data-fragment-index="8">import {StyleSheet} from 'react-native';</span>
-
-									const styles = <span class="fragment" data-fragment-index="8">StyleSheet.create(</span><span class="fragment" data-fragment-index="5">{
-										container: {
-											width: 200,
-											backgroundColor: 'tomato'
-										}
-									}</span><span class="fragment" data-fragment-index="8">);</span>
+						<pre class="grid-cell fragment" data-fragment-index="6">
+								<code class="javascript" data-trim data-noescape>
+									import React from 'react';
+									import {View} from 'react-native';
+	
+									const Container = ({children})=>(
+										&lt;View style={<span class="fragment" data-fragment-index="7">styles.container</span>}&gt;
+											{children}
+										&lt;/View&gt;
+									);
 								</code>
-						</pre>
-						</div>
-						<div class="grid-row">
-							<pre class="grid-cell fragment" data-fragment-index="2">
-									<code class="javascript" data-trim data-noescape>
-										import React from 'react';
-		
-										const Container = ({children})=>(
-											&lt;div style={<span class="fragment" data-fragment-index="3">styles.container</span>}>
-												{children}
-											&lt;/div&gt;
-										);
-									</code>
-								</pre>
-							<pre class="grid-cell fragment" data-fragment-index="6">
-									<code class="javascript" data-trim data-noescape>
-										import React from 'react';
-										import {View} from 'react-native';
-		
-										const Container = ({children})=>(
-											&lt;View style={<span class="fragment" data-fragment-index="7">styles.container</span>}&gt;
-												{children}
-											&lt;/View&gt;
-										);
-									</code>
-								</pre>
-						</div>
+							</pre>
 					</div>
-				</section>
+				</div>
+			</section>
+			<section>
 				<section>
 					<h3>✨ Анимация</h3>
 					<ul class="without-dot">
@@ -348,17 +348,21 @@
 				<section>
 					<img style="height: 600px;" src="https://github.com/fram-x/FluidTransitions/raw/develop/docs/example.gif" alt=" animation example with fluid transitions" />
 				</section>
-				<section>
-					<h3>Навигация</h3>
-					<ul class="without-dot">
-						<li class="fragment"><a href="https://reactnavigation.org/">React Navigation</a></li>
-						<li class="fragment"><a href="https://wix.github.io/react-native-navigation/v2/#/">React Native Navigation
-								(alpha)</a></li>
-					</ul>
-				</section>
-				<section>
-					<h3>📡 Работа с сетью</h3>
-				</section>
+			</section>
+			<section>
+				<h3>Навигация</h3>
+				<ul class="without-dot">
+					<li class="fragment"><a href="https://reactnavigation.org/">React Navigation</a></li>
+					<li class="fragment"><a href="https://wix.github.io/react-native-navigation/v2/#/">React Native Navigation
+							(alpha)</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>📡 Работа с сетью</h3>
+				<ul class="without-dot">
+					<li class="fragment">Браузерный fetch для http(s)</li>
+					<li class="fragment">Браузерный WebSocket сокет соединений</li>
+				</ul>
 			</section>
 
 			<section>
@@ -389,6 +393,10 @@
 					</ol>
 				</section>
 			</section>
+			<section>
+				<h3>Demo Time</h3>
+				<img src="https://gph.to/2zXOEod" alt="wiggle cat with wiggle man" />
+			</section>
 
 			<section>
 				<section>
@@ -397,7 +405,7 @@
 				<section>
 					<h3 class="left-text">👍 Плюсы</h3>
 					<ul class="without-dot">
-						<li class="fragment">Любимый JS и React ❤️.</li>
+						<li class="fragment">Любимый JS и React 😍.</li>
 						<li class="fragment">Разработка сразу под несколько платформ.</li>
 						<li class="fragment">Натив. Нет обертки JS в веб-представление.</li>
 						<li class="fragment">Горячая перезагрузка. (если не правишь нативный код)</li>
@@ -420,7 +428,7 @@
 			</section>
 
 			<section>
-				<h3 class="left-text">Ссылки</h3>
+				<h3 class="left-text">🔖 Ссылки</h3>
 				<ul class="without-dot">
 					<li><a href="https://www.youtube.com/watch?v=hDviGU-57lU" target="_blank">React Native Under The Hood</a></li>
 					<li><a href="https://facebook.github.io/react-native/docs/getting-started" target="_blank">Оф. документация</a></li>
@@ -431,7 +439,8 @@
 			</section>
 
 			<section>
-				<h2>Спасибо за внимание</h2>
+				<h2>🎉 Спасибо за внимание</h2>
+				<br />
 				<h3 class="fragment">Вопросы?</h3>
 			</section>
 		</div>
