@@ -175,7 +175,7 @@
 				</section>
 				<!-- TODO: добавить движение данных -->
 				<section>
-					<h3>Мост</h3>
+					<h3 class="fragment" data-fragment-index="5">Мост</h3>
 					<div style="display: flex;">
 						<div style="flex: 1;">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
@@ -366,8 +366,8 @@
 				<section>
 					<h3>✨ Анимация</h3>
 					<ul class="without-dot">
-						<li><a href="https://facebook.github.io/react-native/docs/animations">Animated API</a></li>
-						<li><a href="https://github.com/kmagiera/react-native-reanimated">Reanimated</a></li>
+						<li><a href="https://facebook.github.io/react-native/docs/animations" target="_blank">Animated API</a></li>
+						<li><a href="https://github.com/kmagiera/react-native-reanimated" target="_blank">Reanimated</a></li>
 					</ul>
 				</section>
 				<section>
@@ -386,7 +386,7 @@
 						<img style="height: 400px; border: none; background-color: transparent; box-shadow: none;"
 							src="https://reactnavigation.org/img/spiro.svg" alt="react navigation" />
 						<figcaption>
-							<a href="https://reactnavigation.org/">React Navigation</a>
+							<a href="https://reactnavigation.org/" target="_blank">React Navigation</a>
 						</figcaption>
 					</figure>
 					<figure class="fragment">
@@ -394,17 +394,54 @@
 							src="https://raw.githubusercontent.com/wix/react-native-navigation/master/.logo.png"
 							alt="react native navigation" />
 						<figcaption>
-							<a href="https://wix.github.io/react-native-navigation/#/">React native navigation</a>
+							<a href="https://wix.github.io/react-native-navigation/#/" target="_blank">React native navigation</a>
 						</figcaption>
 					</figure>
 				</div>
 			</section>
 			<section>
 				<h3>📡 Работа с сетью</h3>
-				<ul class="without-dot">
-					<li class="fragment">Браузерный fetch</li>
+				<section>
+					<div class="fragment">
+						<h4 class="left-text">Браузерный fetch</h4>
+						<pre><code class="javascript" data-trim>
+									fetch('https://mywebsite.com/endpoint/', {
+										method: 'POST',
+										headers: {
+											Accept: 'application/json',
+											'Content-Type': 'application/json',
+										},
+										body: JSON.stringify({
+											firstParam: 'yourValue',
+											secondParam: 'yourOtherValue',
+										}),
+									});
+							</code></pre>
+					</div>
+
+				</section>
+				<section>
+					<h4 class="left-text">Браузерный WebSocket</h4>
+					<pre><code class="javascript" data-trim>
+							const ws = new WebSocket('ws://host.com/path');
+
+							ws.onopen = () => {
+								ws.send('something');
+							};
+
+							ws.onmessage = (e) => {};
+
+							ws.onerror = (e) => {};
+
+							ws.onclose  = (e) => {};
+					</code></pre>
+				</section>
+				<!-- <ul class="without-dot">
+					<li class="fragment">
+						
+					</li>
 					<li class="fragment">Браузерный WebSocket</li>
-				</ul>
+				</ul> -->
 			</section>
 
 			<section>
@@ -417,8 +454,9 @@
 						<li class="fragment">
 							<pre><code class="shell">npm install -g react-native-cli</code></pre>
 						</li>
-						<li class="fragment"><a href="https://jdk.java.net/">Скачать</a> и установить Java JDK</li>
-						<li class="fragment"><a href="https://developer.android.com/studio/index.html">Скачать</a> и установить
+						<li class="fragment"><a href="https://jdk.java.net/" target="_blank">Скачать</a> и установить Java JDK</li>
+						<li class="fragment"><a href="https://developer.android.com/studio/index.html" target="_blank">Скачать</a> и
+							установить
 							Android
 							Studio</li>
 						<li class="fragment">
@@ -438,8 +476,9 @@
 					<ul class="without-dot">
 						<li class="fragment">
 							<pre><code class="shell">npm install -g expo-cli</code></pre>
-						<li class="fragment">Скачать Expo клиент (<a href="https://itunes.com/apps/exponent">IOS</a>|<a
-								href="https://play.google.com/store/apps/details?id=host.exp.exponent">Android</a>)</li>
+						<li class="fragment">Скачать Expo клиент (<a href="https://itunes.com/apps/exponent"
+								target="_blank">IOS</a>|<a href="https://play.google.com/store/apps/details?id=host.exp.exponent"
+								target="_blank">Android</a>)</li>
 						<li class="fragment">
 							<pre><code class="shell">expo init project-name</code></pre>
 						</li>
